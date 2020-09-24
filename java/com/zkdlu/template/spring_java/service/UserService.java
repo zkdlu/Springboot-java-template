@@ -6,7 +6,9 @@ import com.zkdlu.template.spring_java.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.swing.text.html.Option;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -35,15 +37,21 @@ public class UserService {
     }
 
     public UserVO getUser(int id) {
-        User user = userRepository.findById(id).get();
+        Optional<User> result = userRepository.findById(id);
+        if (result.isPresent()) {
+            User user = result.get();
+            return (UserVO) user.convertToVO();
+        }
 
-        return (UserVO) user.convertToVO();
+        return null;
     }
 
     public UserVO updateUser(int id, UserVO userVo) {
-        User user = userRepository.findById(id).get();
+        Optional<User> result = userRepository.findById(id);
 
-        if (user != null) {
+        if (result.isPresent()) {
+            User user = result.get();
+
             user.setName(userVo.getName());
             user.setPassword(userVo.getPassword());
 
