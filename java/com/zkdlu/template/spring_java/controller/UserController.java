@@ -1,7 +1,6 @@
 package com.zkdlu.template.spring_java.controller;
 
 import com.zkdlu.template.spring_java.interfaces.CrudController;
-import com.zkdlu.template.spring_java.model.EntityVO;
 import com.zkdlu.template.spring_java.model.request.UserVO;
 import com.zkdlu.template.spring_java.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

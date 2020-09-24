@@ -1,7 +1,7 @@
 package com.zkdlu.template.spring_java.model.entity;
 
-import com.zkdlu.template.spring_java.model.EntityDao;
-import com.zkdlu.template.spring_java.model.EntityVO;
+import com.zkdlu.template.spring_java.interfaces.EntityDao;
+import com.zkdlu.template.spring_java.interfaces.EntityVO;
 import com.zkdlu.template.spring_java.model.request.UserVO;
 import lombok.*;
 

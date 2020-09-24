@@ -1,14 +1,11 @@
 package com.zkdlu.template.spring_java.service;
 
-import com.zkdlu.template.spring_java.model.EntityDao;
-import com.zkdlu.template.spring_java.model.EntityVO;
 import com.zkdlu.template.spring_java.model.entity.User;
 import com.zkdlu.template.spring_java.model.request.UserVO;
 import com.zkdlu.template.spring_java.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.sound.midi.Soundbank;
 import java.util.List;
 import java.util.stream.Collectors;
 
